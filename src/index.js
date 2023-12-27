@@ -106,7 +106,7 @@ function nextImage(imageCont) {
   })
 }
 
-function previousImage(imageCont, circles) {
+function previousImage(imageCont) {
   index--;
   console.log(index)
   if (index <0) {
@@ -116,9 +116,10 @@ function previousImage(imageCont, circles) {
   else {
     imageCont.style.transform = `translateX(-${index*1000}px)`
   }
-  circles.forEach((circle) => {
+  circles.forEach(circle => {
     circle.classList.remove('active')
-    if (index==circle.getAttribute(data-index)) {
+    console.log(circle)
+    if (index==circle.getAttribute('data-index')) {
       circle.classList.add('active')
     }
   })
