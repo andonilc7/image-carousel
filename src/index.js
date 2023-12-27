@@ -118,7 +118,7 @@ function previousImage(imageCont, circles) {
   }
   circles.forEach((circle) => {
     circle.classList.remove('active')
-    if (index===circle.getAttribute(data-index)) {
+    if (index==circle.getAttribute(data-index)) {
       circle.classList.add('active')
     }
   })
